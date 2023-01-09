@@ -2,14 +2,14 @@ import pandas as pd
 import os
 import sys
 
-
-
 from modules import mapBase as mb
 import modules.mapBase as mb
 
-listaArqruivos = mb.allFiles('docs/financeiro')
 
-pd_financeiro = pd.read_excel(fr'docs/financeiro/{listaArqruivos[0]}')
+listaArqruivos = mb.printLocalFiles('../docs/financeiro')
+listaArqruivos = mb.allFiles('../docs/financeiro')
+
+pd_financeiro = pd.read_excel(fr'../docs/financeiro/{listaArqruivos[0]}')
 #pd_financeiro_santa_rosa = pd.read_excel(fr'docs/financeiro/{listaArqruivos[0]}')
 #pd_financeiro_trevo = pd.read_excel(fr'docs/financeiro/{listaArqruivos[1]}')
 

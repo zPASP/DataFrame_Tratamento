@@ -7,6 +7,14 @@ def allFiles (folder):
     except:
         return False
 
+def printLocalFiles (folder):
+    try:
+        print(os.listdir (fr'./{folder}'))
+        return True
+    except:
+        print("No local files found")
+        return False
+
 def specificFile (folder, format):
     try:
         listFiles = []
