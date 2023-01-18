@@ -56,13 +56,25 @@ df_recebidos['Valor'] = df_recebidos['Valor'].str.replace(',', '.')
 df_recebidos['Valor'] = df_recebidos['Valor'].str.replace(' ', '')   
 df_recebidos['Valor'] = df_recebidos['Valor'].astype(float)   
 
-for coluna in df_recebidos.columns:
-    print(coluna)
-    
-type(plano['Vendas de produtos'])
 
-plano['Vendas de produtos']
-plano['Vendas no balcão']
+
+situacao_recebidos = df_recebidos['Situação'].unique()
+nome_arquivo = 'vendas'
+
+df_recebidos.to_excel('../docs/exports/vendas.xlsx', index=False)
+
+
+
+
+
+
+# for coluna in df_recebidos.columns:
+#     print(coluna)
+    
+# type(plano['Vendas de produtos'])
+
+# plano['Vendas de produtos']
+# plano['Vendas no balcão']
 
 
 
